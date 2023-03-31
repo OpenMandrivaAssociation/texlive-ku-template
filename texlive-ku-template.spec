@@ -1,6 +1,6 @@
 Name:		texlive-ku-template
 Version:	45935
-Release:	1
+Release:	2
 Summary:	Copenhagen University or faculty logo for front page
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/ku-template
