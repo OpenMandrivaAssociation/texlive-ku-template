@@ -3,7 +3,7 @@ Version:	45935
 Release:	2
 Summary:	Copenhagen University or faculty logo for front page
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/ku-template
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/ku-template
 License:	mit
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ku-template.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ku-template.doc.r%{version}.tar.xz
