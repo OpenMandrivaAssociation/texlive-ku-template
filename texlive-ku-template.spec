@@ -1,37 +1,22 @@
-Name:		texlive-ku-template
-Version:	45935
-Release:	2
+%global tl_name ku-template
+%global tl_revision 45935
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	0.02
+Release:	%{tl_revision}.1
 Summary:	Copenhagen University or faculty logo for front page
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/ku-template
 License:	mit
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ku-template.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ku-template.doc.r%{version}.tar.xz
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/ku-template.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/ku-template.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-A comprehensive package for adding University of Copenhagen or
-faculty logo to your front page. For use by student or staff at
-University of Copenhagen (Kobenhavns Universitet).
+A comprehensive package for adding University of Copenhagen or faculty
+logo to your front page. For use by student or staff at University of
+Copenhagen (Kobenhavns Universitet).
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%{_texmfdistdir}/tex/latex/ku-template
-%doc %{_texmfdistdir}/doc/latex/ku-template
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
